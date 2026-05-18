@@ -644,7 +644,7 @@ echo -e "  ${CYAN}│ Pacote       ${NC}: com.dts.freefireth                   $
 echo -e "  ${CYAN}│ Jogo         ${NC}: FreeFire Normal                      ${CYAN}  │${NC}"
 echo -e "  ${CYAN}│ Android      ${NC}: 16                                   ${CYAN}  │${NC}"
 echo -e "  ${CYAN}│ Dispositivo  ${NC}: realme RMX5070                         ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ HWID         ${NC}: 1CFE44C07CC3573E                     ${CYAN}  │${NC}"    
+echo -e "  ${CYAN}│ HWID         ${NC}: D9751768FD981BBO                     ${CYAN}  │${NC}"    
 echo -e "  ${CYAN}├───────────────────────────────────────────────────────┤${NC}"
 echo -e "  ${CYAN}│ ${WHITE}► Origem                                              ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Instalador   ${NC}: com.android.vending - Google Play Store${CYAN}│${NC}"
@@ -653,7 +653,7 @@ echo -e "  ${CYAN}├───────────────────�
 echo -e "  ${CYAN}│ ${WHITE}► Resultado                                           ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Alertas      ${NC}: 0                                      ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Detecções    ${NC}: 0                                      ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ UUID Freefire${NC}: 10690383831                             ${CYAN}│${NC}" 
+echo -e "  ${CYAN}│ UUID Freefire${NC}: 2000231285                             ${CYAN}│${NC}" 
 echo -e "  ${CYAN}└───────────────────────────────────────────────────────┘${NC}"
 
 echo ""
