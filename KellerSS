@@ -6,7 +6,7 @@
 
 # Limpar tela
 clear
-sleep 1
+
 # ========================
 # Cores ANSI
 # ========================
@@ -16,7 +16,7 @@ BRIGHT_CYAN="\033[1;36m"
 ORANGE="\033[38;2;255;140;26m"
 LIGHT_BLUE="\033[1;34m"
 WHITE="\033[1;37m"
-RED="\e[38;5;160m"
+RED="\033[0;31m"
 GREEN="\033[0;32m"
 YELLOW="\033[1;33m"
 DARK_PURPLE="\033[0;35m"
@@ -36,17 +36,16 @@ echo -e "  ${WHITE}discord.gg/allianceoficial${NC}"
 echo -e "${BRIGHT_CYAN}"
 
 # ASCII Art
-echo "  _  __       _ _           _____ ______     "
-echo " l l/ / ___ _l l l ___ _ _l  ___/ ____l     "
-echo " l ' < / _｀ l l l/ _ \ '__l l__ \___ \\    "
-echo " l_l\_ \___,_l_l_l\___/_l   \____/_____/     "
+echo "  _  __      _ _           _____ ______     "
+echo " l l/ /___ _l l l ___ _ _l  ___/  ___l     "
+echo " l   </ _ ' l l l/ _ \ '__l l__ \___ \\   "
+echo " l_l\_\___,_l_l_l\___/_l   \____/_____/     "
 echo -e "${NC}"
 
 # Reseta cor
 echo -e "${NC}"
 
 echo -e "  ${CYAN}Coded By: KellerSS${NC}"
-sleep 3
 
 echo ""
 echo ""
@@ -63,7 +62,7 @@ echo ""
 # ========================
 # Status ADB
 # ========================
-echo -e "  ${WHITE}ADB: ${RED}○ Nenhum dispositivo conectado${NC}"
+echo -e "  ${WHITE}ADB: ${RED}● Nenhum dispositivo conectado${NC}"
 echo ""
 
 # ========================
@@ -80,16 +79,18 @@ echo ""
 # ========================
 # Prompt
 # ========================
-while true; do
+echo -ne "  ${BRIGHT_CYAN}▸ Escolha uma das opções acima:${NC} ${GREEN}"
+read escolha
 
-    echo -ne "  ${BRIGHT_CYAN}▸ Escolha uma das opções acima:${NC} ${GREEN}"
-    read escolha
-
-    case $escolha in
+# ========================
+# Lógica
+# ========================
+case $escolha in
 
     0)
-    break
-    ;;
+        clear
+        echo ""
+        ;;
 
     1|2|3)
     echo ""
@@ -124,17 +125,7 @@ while true; do
         echo -ne "${GREEN}~${WHITE} \$ "
     read
         ;;
-
-        *)
-            echo -e "  ${RED}✗ Opção inválida! Tente novamente.${NC}"
-            echo ""
-            ;;
-
 esac
-
-done
-
-
 
 #!/data/data/com.termux/files/usr/bin/bash
 
@@ -166,14 +157,14 @@ echo -e "  ${WHITE}discord.gg/allianceoficial${NC}"
 echo ""
 
 echo -e "${CYAN_LOGO}"
-echo "  _  __       _ _           _____ ______     "
-echo " l l/ / ___ _l l l ___ _ _l  ___/ ____l     "
-echo " l ' < / _｀ l l l/ _ \ '__l l__ \___ \\    "
-echo " l_l\_ \___,_l_l_l\___/_l   \____/_____/     "
+echo "  _  __      _ _           _____ ______     "
+echo " l l/ /___ _l l l ___ _ _l  ___/  ___l     "
+echo " l   </ _ ' l l l/ _ \ '__l l__ \___ \\   "
+echo " l_l\_\___,_l_l_l\___/_l   \____/_____/     "
 echo -e "${NC}"
 
 echo -e "  ${CYAN}Coded By: KellerSS${NC}"
-sleep 1
+
 echo ""
 echo -e "  ${ORANGE}⚠ Nenhum dispositivo conectado — prosseguindo para reconexão manual.${NC}"
 
@@ -278,8 +269,8 @@ echo -e "${BRIGHT_CYAN}"
 
 # ASCII Art linha por linha
 echo "  _  __       _ _           _____ ______     "
-echo " l l/ / ___ _l l l ___ _ _l  ___/ ____l     "
-echo " l ' < / _｀ l l l/ _ \ '__l l__ \___ \\    "
+echo " l l/ / ___ _l l l ___ _ _l   __/ ____l     "
+echo " l   < / _ \ l l l/ _ \ '__l l__ \___     "
 echo " l_l\_ \___,_l_l_l\___/_l   \____/_____/     "
 
 # Reseta cor
@@ -387,22 +378,16 @@ trap cleanup EXIT INT TERM
 BAR_SIZE=20
 
 items=("Identificando aparelho e ambiente..."
-       "Verificando integridade de logs..."
-       "Verificando root e ferramentas suspeitas..."
-       "Verificando horário e uptime..."
-       "Verificando ambiente e clipboard..."
-       "Analisando MRplays..."
-       "Checando silenciamento de logcat..."
-       "Checando manipulação de bateria..."
+       "Analisando MReplays..."
        "Checando bypass de Wallhack/Holograma..."
        "Checando Shaders..."
        "Checando OBB..."
        "Checando Optional..."
        "Concluindo verificação de logcat de replay...")
 
-times=(7 10 3500 50 30 20 8 6 2 3 3 3 500)
+times=(3 7 23 16 4 5 600)
 
-percent_targets=(7 15 23 31 38 46 55 59 69 77 87 90 100)
+percent_targets=(13 28 43 57 72 88 100)
 
 TOTAL_ITEMS=${#items[@]}
 
@@ -420,10 +405,10 @@ for ((i=0;i<TOTAL_ITEMS;i++)); do
 done
 
 ascii_lines=(
-"  _  __       _ _           _____ ______     "
-" l l/ / ___ _l l l ___ _ _l  ___/ ____l     "
-" l ' < / _｀ l l l/ _ \ '__l l__ \___ \\    "
-" l_l\_ \___,_l_l_l\___/_l   \____/_____/     "
+"  _  __      _ _           _____ ______     "
+" l l/ /___ _l l l ___ _ _l  ___/  ___l     "
+" l   </ _ ' l l l/ _ \ '__l l__ \___ \\\\   "
+" l_l\_\___,_l_l_l\___/_l   \____/_____/     "
 )
 
 spinner=("⠏" "⠛" "⠹" "⠼" "⠴" "⠦" "⠧" "⠇")
@@ -455,6 +440,243 @@ draw_bar() {
                     bar+="${YELLOW}▒${NC}"
                 else
                     bar+="${ORANGE}▓${NC}"
+                fi
+            else
+                bar+="░"
+            fi
+        fi
+    done
+
+    bar+="${WHITE}]${NC}"
+    if [ "$percent" -eq 100 ]; then
+    percent_text="${LIGHT_GREEN}${percent}%${NC}"
+else
+    percent_text="${percent}%"
+fi
+
+echo -ne "$bar $percent_text $timer $completed/${#items[@]}"
+}
+
+start_time=$(date +%s)
+highlight_index=0
+scanner_pos=0
+display_percent=0
+
+printf "\033[2J\033[H"
+printf "" >&2
+
+for ((step=0; step<TOTAL_ITEMS; step++)); do
+
+    # 🔥 RESET DA PISCADA AQUI
+    for ((i=0;i<TOTAL_ITEMS;i++)); do
+        blink_done[$i]=0
+        blink_state[$i]=0
+    done
+
+    for ((i=0;i<TOTAL_ITEMS;i++)); do
+        if [ $i -lt $step ]; then
+            status[$i]="done"
+        elif [ $i -eq $step ]; then
+            status[$i]="current"
+        else
+            status[$i]="future"
+        fi
+    done
+
+    elapsed_item=0
+
+    while [ $elapsed_item -lt ${times[$step]} ]; do
+
+        if [ $resize_flag -eq 1 ]; then
+            printf "\033[2J\033[H"
+            resize_flag=0
+        fi
+
+        current_time=$(date +%s)
+        elapsed=$(( current_time - start_time ))
+        minutes=$(( elapsed / 60 ))
+        seconds=$(( elapsed % 60 ))
+        timer=$(printf "%02d:%02d" $minutes $seconds)
+
+        printf "\033[H"
+
+        echo ""
+        echo -e "  ${BRIGHT_CYAN}KellerSS Android${NC} ${BOX_CYAN}Fucking Cheaters${NC}\033[K"
+        echo -e "  ${WHITE}discord.gg/allianceoficial${NC}\033[K"
+        echo ""
+
+        for ((i=0;i<${#ascii_lines[@]};i++)); do
+            if [ $i -eq $highlight_index ]; then
+                echo -e "${WHITE_LOGO}${ascii_lines[$i]}${NC}\033[K"
+            else
+                echo -e "${CYAN_LOGO}${ascii_lines[$i]}${NC}\033[K"
+            fi
+        done
+
+        highlight_index=$(( (highlight_index + 1) % ${#ascii_lines[@]} ))
+
+        echo ""
+        echo -e "${CYAN}  Coded By: KellerSS${NC}\033[K"
+        echo ""
+
+        echo -ne "${LIGHT_CYAN}${spinner[$spinner_index]}${NC} "
+
+        target=${percent_targets[$step]}
+
+        step_size=2
+        if [ $display_percent -lt $target ]; then
+            display_percent=$((display_percent + step_size))
+            [ $display_percent -gt $target ] && display_percent=$target
+        fi
+
+        display_step=$((step + 1))
+        draw_bar $display_percent $display_step $timer $scanner_pos
+
+        spinner_index=$(( (spinner_index + 1) % ${#spinner[@]} ))
+
+        echo -e "\n"
+
+        for ((i=0;i<TOTAL_ITEMS;i++)); do
+            case ${status[$i]} in
+                done)
+                    echo -e "  ${GREEN}✔${NC} ${items[$i]}\033[K"
+                ;;
+                current)
+                    if [ ${blink_done[$i]} -eq 0 ]; then
+                        case ${blink_state[$i]} in
+                            0)
+                                echo -e "  \033[7m➤ ${WHITE}${items[$i]}\033[0m\033[K"
+                                blink_state[$i]=1
+                            ;;
+                            1)
+                                echo -e "  ${LIGHT_CYAN}➤ ${WHITE}${items[$i]}\033[K"
+                                blink_state[$i]=2
+                            ;;
+                            2)
+                                echo -e "  \033[7m➤ ${WHITE}${items[$i]}\033[0m\033[K"
+                                blink_state[$i]=3
+                            ;;
+                            3)
+                                echo -e "  ${LIGHT_CYAN}➤ ${WHITE}${items[$i]}\033[K"
+                                blink_done[$i]=1
+                            ;;
+                        esac
+                    else
+                        echo -e "  ${LIGHT_CYAN}➤ ${WHITE}${items[$i]}\033[K"
+                    fi
+                ;;
+                future)
+                    echo -e "  ${GRAY}•${NC} ${items[$i]}\033[K"
+                ;;
+            esac
+        done
+
+        scanner_pos=$(( (scanner_pos + 1) % BAR_SIZE ))
+
+        sleep 0.02
+        ((elapsed_item++))
+    done
+done
+
+clear
+
+sleep 5
+
+#!/data/data/com.termux/files/usr/bin/bash
+# Scanner FreeFire Normal - KellerSS Android Termux (Versão Termux Suave e Idêntica)
+# Autor: KellerSS (adaptado)
+
+# ========================
+# Cores ANSI
+# ========================
+CYAN="\033[0;36m"
+BOX_CYAN="\033[38;2;0;180;255m"
+LIGHT_CYAN="\033[1;96m"
+WHITE="\033[1;37m"
+WHITE_LOGO="\033[1;37m"
+GREEN="\033[0;32m"
+LIGHT_GREEN="\033[1;32m"
+ORANGE="\033[38;2;255;140;26m"
+GRAY="\033[0;37m"
+CYAN_LOGO="\033[38;2;0;255;255m"
+BRIGHT_CYAN="\033[1;36m"
+AZUL_PERSONAL="\033[38;2;70;130;180m"
+YELLOW="\033[38;2;255;255;85m"
+NC="\033[0m"
+
+echo -ne "\e[?25l"
+
+resize_flag=0
+trap 'resize_flag=1; sleep 0.02' SIGWINCH
+
+cleanup() {
+    echo -ne "\e[?25h"
+}
+trap cleanup EXIT INT TERM
+
+BAR_SIZE=20
+
+items=("Verificando Integridade de logs..."
+       "Verificando root e ferramentas suspeitas..."
+       "Verificando horario e uptime..."
+       "Verificando ambiente e clipboard..."
+       "Finalizando...")
+
+times=(10 1500 30 15 500)
+
+percent_targets=(20 40 60 80 100)
+
+TOTAL_ITEMS=${#items[@]}
+
+status=()
+for ((i=0;i<TOTAL_ITEMS;i++)); do
+    status+=("future")
+done
+
+# 🔥 FIX IMPORTANTE (RESET DO EFEITO DE PISCADA)
+blink_done=()
+blink_state=()
+for ((i=0;i<TOTAL_ITEMS;i++)); do
+    blink_done[i]=0
+    blink_state[i]=0
+done
+
+ascii_lines=(
+"  _  __      _ _           _____ ______     "
+" l l/ /___ _l l l ___ _ _l  ___/  ___l     "
+" l   </ _ ' l l l/ _ \ '__l l__ \___ \\\\   "
+" l_l\_\___,_l_l_l\___/_l   \____/_____/     "
+)
+
+spinner=("⠏" "⠛" "⠹" "⠼" "⠴" "⠦" "⠧" "⠇")
+spinner_index=0
+
+draw_bar() {
+
+    percent=$1
+    completed=$2
+    timer=$3
+    scanner_pos=$4
+
+    filled=$(( BAR_SIZE * percent / 100 ))
+    [ $filled -ge $BAR_SIZE ] && filled=$((BAR_SIZE - 1))
+    scanner_width=3
+
+    bar="${WHITE}["
+    for ((i=0;i<BAR_SIZE;i++)); do
+        if [ $i -lt $filled ]; then
+            if [ $percent -ge 90 ]; then
+                bar+="${LIGHT_GREEN}█${NC}"
+            else
+                bar+="${LIGHT_CYAN}█${NC}"
+            fi
+        else
+            rel=$(( (i - scanner_pos + BAR_SIZE) % BAR_SIZE ))
+            if [ $rel -lt $scanner_width ]; then
+                if [ $rel -eq 0 -o $rel -eq 2 ]; then
+                    bar+="${YELLOW}▒${NC}"
+                else
+                   bar+="${ORANGE}▓${NC}"
                 fi
             else
                 bar+="░"
@@ -594,8 +816,7 @@ clear
 # ========================
 # Cores
 # ========================
-CYANLOGO="\033[0;36m"
-CYAN="\033[38;2;0;231;255m"
+CYAN="\033[0;36m"
 BOX_CYAN="\033[38;2;0;180;255m"
 RED="\033[0;31m"
 WHITE="\033[1;37m"
@@ -611,7 +832,6 @@ sleep 4
 # ========================
 # HEADER
 # ========================
-echo ""
 echo -e "  ${BRIGHT_CYAN}KellerSS Android${NC} ${BOX_CYAN}Fucking Cheaters${NC}"
 echo -e "  ${WHITE}discord.gg/allianceoficial${NC}"
 echo ""
@@ -622,11 +842,11 @@ echo ""
 echo -e "${BRIGHT_CYAN}"
 echo "  _  __       _ _           _____ ______     "
 echo " l l/ / ___ _l l l ___ _ _l  ___/ ____l     "
-echo " l ' < / _｀ l l l/ _ \ '__l l__ \___ \\    "
+echo " l   < / _ ' l l l/ _ \ '__l l__ \___ \\   "
 echo " l_l\_ \___,_l_l_l\___/_l   \____/_____/     "
 echo -e "${NC}"
 
-echo -e "  ${CYANLOGO}Coded By: KellerSS${NC}"
+echo -e "  ${CYAN}Coded By: KellerSS${NC}"
 echo ""
 
 sleep 2
@@ -644,16 +864,16 @@ echo -e "  ${CYAN}│ Pacote       ${NC}: com.dts.freefireth                   $
 echo -e "  ${CYAN}│ Jogo         ${NC}: FreeFire Normal                      ${CYAN}  │${NC}"
 echo -e "  ${CYAN}│ Android      ${NC}: 16                                   ${CYAN}  │${NC}"
 echo -e "  ${CYAN}│ Dispositivo  ${NC}: realme RMX5070                         ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ HWID         ${NC}: D9751768FD981BBO                     ${CYAN}  │${NC}"    
+echo -e "  ${CYAN}│ HWID         ${NC}: 1CFE44C07CC3573E                     ${CYAN}  │${NC}"    
 echo -e "  ${CYAN}├───────────────────────────────────────────────────────┤${NC}"
 echo -e "  ${CYAN}│ ${WHITE}► Origem                                              ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Instalador   ${NC}: com.android.vending - Google Play Store${CYAN}│${NC}"
-echo -e "  ${CYAN}│ Classificação${NC}: ${GREEN} ✅ ${NC}seguro - Google Play Store         ${CYAN}│${NC}"
+echo -e "  ${CYAN}│ Classificação${NC}: ${GREEN}✅${NC}seguro - Google Play Store           ${CYAN}│${NC}"
 echo -e "  ${CYAN}├───────────────────────────────────────────────────────┤${NC}"
 echo -e "  ${CYAN}│ ${WHITE}► Resultado                                           ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Alertas      ${NC}: 0                                      ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Detecções    ${NC}: 0                                      ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ UUID Freefire${NC}: 2000231285                             ${CYAN}│${NC}" 
+echo -e "  ${CYAN}│ UUID Freefire${NC}: 132934813                              ${CYAN}│${NC}" 
 echo -e "  ${CYAN}└───────────────────────────────────────────────────────┘${NC}"
 
 echo ""
@@ -664,6 +884,6 @@ NC="\033[0m"
 
 
 while true; do
-    echo -ne "${GREEN}~${WHITE} \$ "
+    echo -ne "${GREEN}~${WHITE}$ "
     read cmd
 done
