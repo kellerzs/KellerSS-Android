@@ -534,7 +534,6 @@ for ((step=0; step<TOTAL_ITEMS; step++)); do
 
         spinner_index=$(( (spinner_index + 1) % ${#spinner[@]} ))
 
-        echo -e "\n"
 
         for ((i=0;i<TOTAL_ITEMS;i++)); do
             case ${status[$i]} in
@@ -785,7 +784,6 @@ for ((step=0; step<TOTAL_ITEMS; step++)); do
 
         spinner_index=$(( (spinner_index + 1) % ${#spinner[@]} ))
 
-        echo -e "\n"
 
         for ((i=0;i<TOTAL_ITEMS;i++)); do
             case ${status[$i]} in
