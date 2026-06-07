@@ -622,7 +622,7 @@ items=("Verificando Integridade de logs..."
        "Verificando ambiente e clipboard..."
        "Finalizando...")
 
-times=(10 1500 30 15 500)
+times=(10 1800 30 15 500)
 
 percent_targets=(20 40 60 80 100)
 
