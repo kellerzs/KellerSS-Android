@@ -685,7 +685,13 @@ draw_bar() {
     done
 
     bar+="${WHITE}]${NC}"
-    echo -ne "$bar $percent% $timer $completed/${#items[@]}"
+if [ "$percent" -eq 100 ]; then
+    percent_text="${LIGHT_GREEN}${percent}%${NC}"
+else
+    percent_text="${percent}%"
+fi
+
+echo -ne "$bar $percent_text $timer $completed/${#items[@]}"
 }
 
 start_time=$(date +%s)
