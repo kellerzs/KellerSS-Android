@@ -534,6 +534,7 @@ for ((step=0; step<TOTAL_ITEMS; step++)); do
 
         spinner_index=$(( (spinner_index + 1) % ${#spinner[@]} ))
 
+        echo -e "\n"
 
         for ((i=0;i<TOTAL_ITEMS;i++)); do
             case ${status[$i]} in
@@ -784,6 +785,7 @@ for ((step=0; step<TOTAL_ITEMS; step++)); do
 
         spinner_index=$(( (spinner_index + 1) % ${#spinner[@]} ))
 
+        echo -e "\n"
 
         for ((i=0;i<TOTAL_ITEMS;i++)); do
             case ${status[$i]} in
@@ -882,7 +884,7 @@ echo -e "  ${CYAN}│ Pacote       ${NC}: com.dts.freefireth                   $
 echo -e "  ${CYAN}│ Jogo         ${NC}: FreeFire Normal                      ${CYAN}  │${NC}"
 echo -e "  ${CYAN}│ Android      ${NC}: 16                                   ${CYAN}  │${NC}"
 echo -e "  ${CYAN}│ Dispositivo  ${NC}: realme RMX5070                         ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ HWID         ${NC}: C07E44C07CC31CFE                     ${CYAN}  │${NC}"    
+echo -e "  ${CYAN}│ HWID         ${NC}: 4C0744573E3573E                     ${CYAN}  │${NC}"    
 echo -e "  ${CYAN}├───────────────────────────────────────────────────────┤${NC}"
 echo -e "  ${CYAN}│ ${WHITE}► Origem                                              ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Instalador   ${NC}: com.android.vending - Google Play Store${CYAN}│${NC}"
@@ -891,7 +893,7 @@ echo -e "  ${CYAN}├───────────────────�
 echo -e "  ${CYAN}│ ${WHITE}► Resultado                                           ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Alertas      ${NC}: 0                                      ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Detecções    ${NC}: 0                                      ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ UUID Freefire${NC}: 234934813                              ${CYAN}│${NC}" 
+echo -e "  ${CYAN}│ UUID Freefire${NC}: 345245322                              ${CYAN}│${NC}" 
 echo -e "  ${CYAN}└───────────────────────────────────────────────────────┘${NC}"
 
 echo ""
