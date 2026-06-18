@@ -893,7 +893,7 @@ echo -e "  ${CYAN}├───────────────────�
 echo -e "  ${CYAN}│ ${WHITE}► Resultado                                           ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Alertas      ${NC}: 0                                      ${CYAN}│${NC}"
 echo -e "  ${CYAN}│ Detecções    ${NC}: 0                                      ${CYAN}│${NC}"
-echo -e "  ${CYAN}│ UUID Freefire${NC}: 345245322                              ${CYAN}│${NC}" 
+echo -e "  ${CYAN}│ UUID Freefire${NC}: 394479629                              ${CYAN}│${NC}" 
 echo -e "  ${CYAN}└───────────────────────────────────────────────────────┘${NC}"
 
 echo ""
